@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Store</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./jqrud.js" ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./jqstyles.css">
+    
+  </head>
+  <body class="container"> 
+      
+        <h1>Recipe API Client</h1>
+        <div class="form-group">
+          <label for="">Title</label>
+          <input type="text"
+            class="form-control" name="title" id="title" aria-describedby="helpId" placeholder="Title of the Reciepe">
+          <small id="titleHelp" class="form-text text-muted">Enter title of the Recipe</small>
+        </div>
+        <div class="form-group">
+          <label for="">body</label>
+          <input type="text"
+            class="form-control" name="body" id="body" aria-describedby="helpId" placeholder="Recipe Details">
+          <small id="bodyHelp" class="form-text text-muted">Help Details</small>
+        </div>
+        <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Record</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="updateId"> <br>   
+                        <div class="form-group">
+                          <label for="updateTitle">Title</label>
+                          <input type="text"
+                            class="form-control" name="updateTitle" id="updateTitle" aria-describedby="updateHelpId" placeholder="">
+                          <small id="helpId" class="form-text text-muted">Enter Title to Update</small>
+                        </div> 
+                    <br>
+                    <div class="form-group">
+                      <label for="updateBody">Body</label>
+                      <textarea class="form-control" name="updateBody" id="updateBody" rows="3"></textarea>
+                    </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button id="updateSave" class="btn btn-secondary">Update</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+  </body>
+</html>
